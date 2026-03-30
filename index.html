@@ -24,6 +24,7 @@ text-shadow:0 0 10px #b84cff,0 0 20px #ff4dff;
 }
 
 #search{
+ 
 padding:12px;
 width:260px;
 margin:20px;
@@ -88,6 +89,34 @@ background:#050505;
 font-size:14px;
 color:#d9a3ff;
 }
+  #featured{
+margin:30px;
+padding:20px;
+background:#0a0a0a;
+border-radius:15px;
+box-shadow:0 0 20px #ff4dff, 0 0 40px #7a00ff;
+}
+
+#featured h2{
+color:#ff4dff;
+text-shadow:0 0 10px #b84cff;
+}
+
+#featured-img{
+width:90%;
+max-width:900px;
+height:300px;       
+object-fit:cover;   
+border-radius:15px;
+margin-top:15px;
+box-shadow:0 0 20px #7a00ff;
+transition:0.3s;
+}
+  
+#featured-img:hover{
+transform:scale(1.02);
+box-shadow:0 0 30px #ff4dff;
+}
   @media (max-width:600px){
 
 h1{
@@ -125,6 +154,17 @@ font-size:14px;
 
 <input type="text" id="search" placeholder="🔍 Search wallpapers..." onkeyup="searchWallpaper()">
 
+  <div id="featured">
+
+<h2>🌩 Featured Wallpaper</h2>
+
+<img src="wallpapers/storm.jpg" id="featured-img">
+
+<br>
+
+<button onclick="download('wallpapers/storm.jpg')">Download HD</button>
+
+</div>
 <div id="gallery">
 
 <div class="wallpaper-card">
@@ -185,6 +225,11 @@ font-size:14px;
     <div class="wallpaper-card">
 <img src="wallpapers/clouds-sea-sunset.png" class="wallpaper">
 <button onclick="download('wallpapers/clouds-sea-sunset.png')">Download</button>
+</div> 
+
+  <div class="wallpaper-card">
+<img src="wallpapers/clouds-storm-sea-thunder.png" class="wallpaper">
+<button onclick="download('wallpapers/clouds-storm-sea-thunder.png')">Download</button>
 </div> 
   
 </div>
