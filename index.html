@@ -251,6 +251,19 @@ document.body.removeChild(link);
 
 }
 
+  window.onload = function(){
+
+let gallery = document.getElementById("gallery");
+let items = Array.from(gallery.children);
+
+// shuffle logic
+items.sort(() => Math.random() - 0.5);
+
+// re-append
+items.forEach(item => gallery.appendChild(item));
+
+}
+
 
 
 function searchWallpaper(){
