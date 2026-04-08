@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>AuraWallsHD</title>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<style>
+
+body{
+font-family: Arial;
+background:#000;
+color:white;
+text-align:center;
+margin:0;
+}
+
+h1{
+margin-top:20px;
+font-size:42px;
+letter-spacing:3px;
+color:#d9a3ff;
+text-shadow:0 0 10px #b84cff,0 0 20px #ff4dff;
+}
+
+#search{
+ 
+padding:12px;
+width:260px;
+margin:20px;
+border-radius:25px;
+border:none;
+outline:none;
+font-size:16px;
+background:#111;
+color:white;
+box-shadow:0 0 10px #b84cff;
+}
+
+#gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding:30px;
+}
+
+.wallpaper-card{
+background:#0b0b0b;
+padding:12px;
+border-radius:12px;
+transition:0.3s;
+box-shadow:0 0 10px #7a00ff;
+}
+
+.wallpaper-card:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px #ff4dff,0 0 30px #b84cff;
+}
+
+.wallpaper-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+button{
+padding:10px 20px;
+margin-top:10px;
+cursor:pointer;
+border:none;
+border-radius:20px;
+background:#7a00ff;
+color:white;
+font-weight:bold;
+transition:0.3s;
+box-shadow:0 0 10px #ff4dff,0 0 20px #b84cff;
+}
+
+button:hover{
+background:#b84cff;
+box-shadow:0 0 15px #ff4dff,0 0 30px #b84cff;
+}
+
+footer{
+margin-top:30px;
+padding:15px;
+background:#050505;
+font-size:14px;
+color:#d9a3ff;
+}
+  #featured{
+margin:30px;
+padding:20px;
+background:#0a0a0a;
+border-radius:15px;
+box-shadow:0 0 20px #ff4dff, 0 0 40px #7a00ff;
+}
+
+#featured h2{
+color:#ff4dff;
+text-shadow:0 0 10px #b84cff;
+}
+
+#featured-img{
+width:90%;
+max-width:900px;
+height:300px;       
+object-fit:cover;   
+border-radius:15px;
+margin-top:15px;
+box-shadow:0 0 20px #7a00ff;
+transition:0.3s;
+}
+  
+#featured-img:hover{
+transform:scale(1.02);
+box-shadow:0 0 30px #ff4dff;
+}
+  @media (max-width:600px){
+
+h1{
+font-size:28px;
+}
+
+#search{
+width:80%;
+}
+
+#gallery{
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:15px;
+}
+
+.wallpaper-card{
+padding:8px;
+}
+
+button{
+padding:8px 14px;
+font-size:14px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>AuraWallsHD</h1>
+
+<input type="text" id="search" placeholder="🔍 Search wallpapers..." onkeyup="searchWallpaper()">
+
+  <div id="featured">
+
+<h2>🌩 Featured Wallpaper</h2>
+
+<img src="wallpapers/cloud-storm-sea-thunder.png" id="featured-img">
+
+<br>
+
+<button onclick="download('wallpapers/clouds-storm-sea-thunder.png')">Download HD</button>
+
+</div>
+<div id="gallery">
+
+<div class="wallpaper-card">
+<img src="wallpapers/sakura-temple.png" class="wallpaper">
+<button onclick="download('wallpapers/sakura-temple.png')">Download</button>
+</div>
+
+<div class="wallpaper-card">
+<img src="wallpapers/sakura-river.png" class="wallpaper">
+<button onclick="download('wallpapers/sakura-river.png')">Download</button>
+</div>
+
+<div class="wallpaper-card">
+<img src="wallpapers/sakura-anime-night.png" class="wallpaper">
+<button onclick="download('wallpapers/sakura-anime-night.png')">Download</button>
+</div>
+  
+<div class="wallpaper-card">
+<img src="wallpapers/sakura-rainy-season.jpg" class="wallpaper">
+<button onclick="download('wallpapers/sakura-rainy-season.jpg')">Download</button>
+</div>
+
+ <div class="wallpaper-card">
+<img src="wallpapers/sakura-river-sunset.png" class="wallpaper">
+<button onclick="download('wallpapers/sakura-river-sunset.png')">Download</button>
+</div>
+
+  <div class="wallpaper-card">
+<img src="wallpapers/sakura-anime-street.png" class="wallpaper">
+<button onclick="download('wallpapers/sakura-anime-street.png')">Download</button>
+</div>
+
+ <div class="wallpaper-card">
+<img src="wallpapers/sakura-fairy-tail.png" class="wallpaper">
+<button onclick="download('wallpapers/sakura-fairy-tail.png')">Download</button>
+</div> 
+
+   <div class="wallpaper-card">
+<img src="wallpapers/sakura-mount-fuji.png" class="wallpaper">
+<button onclick="download('wallpapers/sakura-mount-fuji.png')">Download</button>
+</div> 
+
+   <div class="wallpaper-card">
+<img src="wallpapers/sakura-petal.png" class="wallpaper">
+<button onclick="download('wallpapers/sakura-petal.png')">Download</button>
+</div> 
+
+   <div class="wallpaper-card">
+<img src="wallpapers/clouds-golden-hour-sunset.png" class="wallpaper">
+<button onclick="download('wallpapers/clouds-golden-hour-sunset.png')">Download</button>
+</div> 
+
+   <div class="wallpaper-card">
+<img src="wallpapers/clouds-soft-moody.png" class="wallpaper">
+<button onclick="download('wallpapers/clouds-soft-moody.png')">Download</button>
+</div> 
+
+    <div class="wallpaper-card">
+<img src="wallpapers/clouds-sea-sunset.png" class="wallpaper">
+<button onclick="download('wallpapers/clouds-sea-sunset.png')">Download</button>
+</div> 
+
+  <div class="wallpaper-card">
+<img src="wallpapers/cloud-storm-sea-thunder.png" class="wallpaper">
+<button onclick="download('wallpapers/cloud-storm-sea-thunder.png')">Download</button>
+</div> 
+  
+  <div class="wallpaper-card">
+<img src="wallpapers/clouds-stars-milkyway-galaxy-night.png" class="wallpaper">
+<button onclick="download('wallpapers/clouds-stars-milkyway-galaxy-night.png')">Download</button>
+</div> 
+  
+</div>
+
+<footer>
+© 2026 AuraWallsHD
+</footer>
+
+<script>
+
+function download(img){
+
+let link = document.createElement("a");
+link.href = img;
+link.download = img;
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+
+}
+
+  window.onload = function(){
+
+let gallery = document.getElementById("gallery");
+let items = Array.from(gallery.children);
+
+// shuffle logic
+items.sort(() => Math.random() - 0.5);
+
+// re-append
+items.forEach(item => gallery.appendChild(item));
+
+}
+
+
+
+function searchWallpaper(){
+
+let input=document.getElementById("search").value.toLowerCase();
+let cards=document.getElementsByClassName("wallpaper-card");
+
+for(let i=0;i<cards.length;i++){
+
+let img=cards[i].getElementsByTagName("img")[0].src.toLowerCase();
+
+if(img.includes(input)){
+cards[i].style.display="";
+}else{
+cards[i].style.display="none";
+}
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
